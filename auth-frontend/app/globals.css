@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  --dark-spruce: #004b23;
+  --green: #006400;
+  --green-2: #007200;
+  --green-3: #008000;
+  --bright-fern: #38b000;
+  --radioactive-grass: #70e000;
+  --slime-lime: #9ef01a;
+  --chartreuse: #ccff33;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  background: linear-gradient(135deg, #002a14 0%, #004b23 50%, #003318 100%);
+  color: #e8f5e9;
+  font-family: 'Geist', Arial, Helvetica, sans-serif;
+}
+
+/* ── Card ── */
+.card {
+  background: rgba(0, 50, 20, 0.7) !important;
+  border: 1px solid rgba(112, 224, 0, 0.35) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(112, 224, 0, 0.1);
+}
+
+/* ── Inputs ── */
+.input-field {
+  display: block;
+  width: 100%;
+  background: rgba(0, 30, 12, 0.8) !important;
+  border: 2px solid rgba(56, 176, 0, 0.5) !important;
+  color: #e8f5e9 !important;
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  outline: none !important;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.input-field::placeholder {
+  color: rgba(158, 240, 26, 0.35) !important;
+}
+
+.input-field:focus {
+  border-color: var(--radioactive-grass) !important;
+  box-shadow: 0 0 0 3px rgba(112, 224, 0, 0.2), 0 0 12px rgba(112, 224, 0, 0.1) !important;
+}
+
+.input-field:hover:not(:focus) {
+  border-color: rgba(112, 224, 0, 0.65) !important;
+}
+
+/* select option fix */
+.input-field option {
+  background: #002a14;
+  color: #e8f5e9;
+}
+
+/* ── Button ── */
+.btn-primary {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, var(--bright-fern) 0%, var(--radioactive-grass) 100%) !important;
+  color: #002a14 !important;
+  font-weight: 800;
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
+  border: none !important;
+  cursor: pointer;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  box-shadow: 0 4px 15px rgba(112, 224, 0, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(112, 224, 0, 0.45);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(112, 224, 0, 0.25);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Glow text ── */
+.glow-text {
+  color: var(--chartreuse);
+  text-shadow: 0 0 24px rgba(204, 255, 51, 0.45), 0 0 48px rgba(204, 255, 51, 0.15);
+}
+
+/* ── Particles ── */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(112, 224, 0, 0.15);
+  margin: 1.25rem 0;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #002a14; }
+::-webkit-scrollbar-thumb { background: var(--green-2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--bright-fern); }
