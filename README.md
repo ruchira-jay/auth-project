@@ -1,4 +1,4 @@
-# Auth App
+# Authentication App
 
 A full-stack authentication and user management system built with **NestJS** (backend) and **Next.js** (frontend), featuring role-based access control, JWT authentication, and a modern animated UI.
 
